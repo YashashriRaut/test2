@@ -3,69 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yes or No</title>
+    <title>Activity 1</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            text-align: center;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            color: #333;
         }
-        .content, .response {
-            display: none;
+
+        header{
+            background-color: green;
+            color: #fff;
+            padding: 20px 0;
         }
-        .active {
-            display: block;
-        }
-        img {
-            max-width: 300px;
-            height: auto;
-            margin-top: 20px;
-        }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+
+        header .container {
+  max-width: 1200px;
+  margin: 10 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: center;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  
+}
+
+.about{
+    
+  max-width: 500px;
+  margin: 10;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(157, 5, 5, 0.1);
+  border-radius: 15px;
+  text-align: center;
+}
+.about h2{
+    color: rgb(54, 151, 211);
+}
+
+.responsive{
+  max-width: 500px;
+  margin: 10;
+  
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(157, 5, 5, 0.1);
+  border-radius: 15px;
+  text-align: center;
+}
+.responsive h3{
+    color:rgb(54, 151, 211) ;
+    
+}
+
+.box{
+  max-width: 500px;
+  margin: 10;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(157, 5, 5, 0.1);
+  border-radius: 15px;
+  text-align: center; 
+  
+}
+.box h4{
+    color: rgb(54, 151, 211);
+}
+footer{
+    max-width: 1200px;
+  margin: 10 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+}
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10;
+  display: flex;
+  text-align: center;
+}
+footer h4{
+    color: #fff;
+    
+
+footer nav ul li {
+  margin-left: 0px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  
+}
+
+
     </style>
 </head>
 <body>
-    <!-- Main Content -->
-    <div class="content active" id="mainContent">
-        <h1>Hello!</h1>
-        <img src="https://e1.pxfuel.com/desktop-wallpaper/151/458/desktop-wallpaper-bubu-dudu-star-bubu-dudu.jpg" alt="Cute Image">
-        <p>Do you love me?</p>
-        <button onclick="showResponse('yes')">Yes</button>
-        <button onclick="showResponse('no')">No</button>
+    <header>
+        <div class="container">
+    <h1>Welcome to my website Task</h1>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href=#>About</a></li>
+        <li><a href=#>Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+    </header>
+    <div>
+    <section class="about">
+        <h2>About CSS</h2>
+        <p>Cascanding Style sheet (css) show you to style and layout you web pages</p>
+
+    </section>
+    </div>
+    <div>
+        <section class="responsive">
+            <h3>Responsive Design</h3>
+            <p>Responsive design ensures your webpage looks great on all devices,
+                from desktop to mobile devices</p>
+            </p>
+        </section>
+    </div>
+    <div>
+        <section class="box">
+            <h4>Box Model</h4>
+            <p> The CSS model describe the rectangular boxes generated for elements. It includes margins,borders,padding, and the actual content.</p>
+        </section>
     </div>
 
-    <!-- Response Content -->
-    <div class="response" id="responseContent">
-        <h2 id="responseMessage"></h2>
-        <img id="responseImage" src="" alt="Response Image">
+   <footer>
+    <div>
+        <h4>Created by [Student Name] Follow us on </h4>
+        <ul>
+            <li> <a href=#>Instagram</a></li>
+            <li> <a href=#>Twitter</a></li>
+            <li> <a href=#>Linkdein</a></li>
+        </ul>
     </div>
-
-    <script>
-        function showResponse(answer) {
-            // Hide the main content
-            document.getElementById('mainContent').classList.remove('active');
-
-            // Show the response content
-            document.getElementById('responseContent').classList.add('active');
-
-            // Customize the response based on the answer
-            if (answer === 'yes') {
-                document.getElementById('responseMessage').textContent = 'Thank you!';
-                document.getElementById('responseImage').src = 'https://tse1.mm.bing.net/th?id=OIP.b44PdLqswEaQAtgv5MJDQwHaHa&pid=Api&P=0&h=180';
-            } else {
-                document.getElementById('responseMessage').textContent = 'Ja mg dusri bagha!';
-                document.getElementById('responseImage').src = 'https://ih1.redbubble.net/image.3817068377.2804/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg';
-            }
-        }
-    </script>
+   </footer>
+    
 </body>
 </html>
